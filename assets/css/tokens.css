@@ -1,0 +1,23 @@
+/* Brand placeholders — replace with real CIS values when provided.
+   Every page reads colors/fonts/logo only from here.
+   Palette below is a temporary stand-in borrowed from a public university
+   CIS color spec (PANTONE 201C / Cool Gray 11C / 874C / 877C) — swap out
+   once the actual CIS is finalized. Company name/logo are NOT set from
+   that source and remain generic placeholders elsewhere in the site. */
+:root {
+  --color-primary: #a31f34;   /* PANTONE 201C */
+  --color-secondary: #555559; /* PANTONE Cool Gray 11C */
+  --color-accent: #8c6e4a;    /* PANTONE 874C */
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f6f8;
+  --color-text: #1c1c1c;
+  --color-text-muted: #5a5a5a;
+  --color-border: #e0e3e7;
+
+  --font-heading: "Noto Sans TC", "Segoe UI", sans-serif;
+  --font-body: "Noto Sans TC", "Segoe UI", sans-serif;
+
+  /* Set to url("../img/logo.svg") once a real logo file is provided */
+  --logo-image: none;
+}
