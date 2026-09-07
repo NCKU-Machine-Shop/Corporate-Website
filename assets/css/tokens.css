@@ -1,23 +1,23 @@
-/* Brand placeholders — replace with real CIS values when provided.
-   Every page reads colors/fonts/logo only from here.
-   Palette below is a temporary stand-in borrowed from a public university
-   CIS color spec (PANTONE 201C / Cool Gray 11C / 874C / 877C) — swap out
-   once the actual CIS is finalized. Company name/logo are NOT set from
-   that source and remain generic placeholders elsewhere in the site. */
+/* NCKU CIS A-03: official RGB values for standard and supporting colors.
+   https://web.ncku.edu.tw/p/412-1000-18098.php?Lang=zh-tw
+   https://www.cc.ncku.edu.tw/cis/cisdl.php?dlid=4
+   Color placement references https://mtrdc.web2.ncku.edu.tw/.
+   Surface colors and the darker interaction color are UI derivatives. */
 :root {
   --color-primary: #a31f34;   /* PANTONE 201C */
   --color-secondary: #555559; /* PANTONE Cool Gray 11C */
   --color-accent: #8c6e4a;    /* PANTONE 874C */
+  --color-silver: #a6a9ab;   /* PANTONE 877C */
+  --color-primary-hover: #84192a;
+  --color-on-primary: #ffffff;
 
   --color-bg: #ffffff;
-  --color-bg-alt: #f4f6f8;
+  --color-bg-alt: #f5f5f5;
   --color-text: #1c1c1c;
-  --color-text-muted: #5a5a5a;
-  --color-border: #e0e3e7;
+  --color-text-muted: var(--color-secondary);
+  --color-border: #dededf;
 
   --font-heading: "Noto Sans TC", "Segoe UI", sans-serif;
   --font-body: "Noto Sans TC", "Segoe UI", sans-serif;
 
-  /* Set to url("../img/logo.svg") once a real logo file is provided */
-  --logo-image: none;
 }

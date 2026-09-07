@@ -1,50 +1,20 @@
-# 網站 Placeholder 整理
+# 網站待補內容
 
-依檔案分類列出目前所有待填內容（中文頁面 + 英文頁面 + CSS）。
+## 已填入
 
-## index.html / en/index.html
-- `<title>` 與 meta description 中的 `[公司名稱]` / `[Company Name]`
-- meta description 中的 `[一句話公司簡介]` / `[one-line company description]`
-- navbar 品牌名稱 `<span class="brand-name">[公司名稱]</span>`
-- 首頁大標題 `<h1>[公司名稱]</h1>`
-- 首頁副標語 `[一句話說明公司提供的價值，例如：量身訂做的儀器研發與客製化製造專家]`
-- 「客製案例」區塊簡述 `[簡述客製化專案的服務範圍]`
-- 「研發經驗」區塊簡述 `[簡述研發經驗涵蓋的技術領域]`
-- footer 版權 `&copy; 2026 [公司名稱]`
+- Logo：使用原始 PDF 匯出的橫式 assets/img/logo.svg，已套用全站頁首。
+- CIS：依成大官方 A-03 標準色規範，參考機械科技研發中心網站的配色方式。
 
-## about.html / en/about.html
-- `<title>` 與 meta description 的 `[公司名稱]` / `[一句話公司簡介]`
-- navbar 品牌名稱
-- 公司沿革段落 `[公司沿革、成立年份、經營理念簡介]`
-- 使命／願景段落 `[公司使命／願景說明]`
-- 所在地／服務範圍段落 `[公司所在地／服務範圍]`
-- footer 版權
+- 中文六頁：名稱、首頁定位、沿革／使命／據點、團隊、案例、核心技術／設備／檢測與聯絡方式。
+- 聯絡方式取自 material/網站用.pptx 第 6 頁。
+- 團隊含 2 位主管／指導教授、5 位成員；經使用者確認採無照片卡片。
+- 案例以 material/交貨實績.pptx 第 2–23 頁名稱及同頁圖片配對；沒有來源的案例簡述已移除。
 
-## contact.html / en/contact.html
-- `<title>` 與 meta description 的 `[公司名稱]` / `[一句話公司簡介]`
-- navbar 品牌名稱
-- 電話 `[電話號碼]`
-- Email 顯示文字 `[電子郵件]`，且 `mailto:` 連結目前指向假的 `info@example.com`
-- 地址／服務範圍 `[公司地址／服務範圍]`
-- footer 版權
+## 尚待補充或定案
 
-## projects.html / en/projects.html
-- `<title>` 與 meta description 的 `[公司名稱]` / `[一句話公司簡介]`
-- navbar 品牌名稱
-- 四則案例卡片標題與簡述：`[案例標題 1~4]`、`[案例簡述 1~4]`
-- footer 版權
+- 英文：使用者要求先留白。en/ 保留導覽骨架，正文及未提供的名稱留空；已移除假信箱與佔位文案，中文 EN 切換暫停。
+- LICENSE：版權人尚待確認。
+- 個別成員肖像與聯絡資訊：未提供，目前版面不要求這些欄位。
+- 獨立 JPG：未確認案例對應，依使用者指示以簡報圖片為主。
 
-## rd.html / en/rd.html
-- `<title>` 與 meta description 的 `[公司名稱]` / `[一句話公司簡介]`
-- navbar 品牌名稱
-- 三個分類錨點連結文字 `[分類 1~3]`
-- 三個分類區塊標題與說明 `[分類 1~3]`、`[分類 1~3 說明]`
-- footer 版權
-
-## assets/css/tokens.css
-- 品牌色彩暫定值：`--color-primary`、`--color-secondary`、`--color-accent`（等 CIS 配色定案後替換）
-- `--logo-image: none`，註解註明待有 logo 檔案後改為 `url("../img/logo.svg")`
-
----
-
-**共通模式**：所有頁面的 `[公司名稱]` / `[一句話公司簡介]` / navbar 品牌名稱 / footer 版權都是同一組佔位字串，重複出現於每個頁面（中英各一份）。之後有正式公司名稱與 CIS 後，需要逐頁替換，或考慮改為共用 include（目前架構為純靜態、無模板引擎，故各頁各自複製）。
+勿猜測人名英譯、案例規格、專案成果或照片對應。

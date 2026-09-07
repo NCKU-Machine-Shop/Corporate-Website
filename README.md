@@ -5,7 +5,7 @@
 ## 狀態
 
 - [x] 版型 / 頁面結構
-- [ ] 正式品牌 CIS（Logo、配色）— 待提供，屆時只需更新 `assets/css/tokens.css` 與 logo 素材，無需改動頁面 HTML
+- [x] Logo 與配色：使用精工室原始 Logo，配色依 [成大識別系統](https://web.ncku.edu.tw/p/412-1000-18098.php?Lang=zh-tw)，用色方式參考 [機械科技研發中心](https://mtrdc.web2.ncku.edu.tw/)
 - [ ] 正式中英文內容 — 目前為佔位文字（以 `[ ]` 標示）
 - [ ] GitHub Pages 部署 — 待有 GitHub 帳號 / remote 後另行處理
 - [x] `LICENSE` — All Rights Reserved
@@ -15,7 +15,7 @@
 ```
 index.html / about.html / projects.html / rd.html / contact.html   繁體中文頁面
 en/                                                                  英文頁面（同名對應）
-assets/css/tokens.css                                                品牌變數（顏色、字型、Logo 佔位）
+assets/css/tokens.css                                                品牌變數（成大標準色、字型）
 assets/css/style.css                                                 版型與元件樣式
 assets/js/nav.js                                                     手機版導覽選單收合
 ```

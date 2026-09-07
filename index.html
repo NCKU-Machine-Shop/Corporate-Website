@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>首頁 | [公司名稱]</title>
-<meta name="description" content="[公司名稱] — [一句話公司簡介]">
+<title>首頁｜精密儀器工程室</title>
+<meta name="description" content="精密儀器工程室——精密儀器研發、客製製造與自動化系統整合">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home-page">
+<a class="skip-link" href="#main-content">跳至主要內容</a>
+<div class="contact-strip"><div class="container">國立成功大學・機械科技研發中心 <a href="tel:0974066017">業務洽詢：0974066017</a></div></div>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">[公司名稱]</span>
+      <img class="brand-logo" src="assets/img/logo.svg" alt="" width="420" height="235">
+      <span class="brand-name">精密儀器工程室</span>
     </a>
     <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
       <span class="sr-only">選單</span>
@@ -25,49 +27,45 @@
       <ul>
         <li><a href="index.html" class="active">首頁</a></li>
         <li><a href="about.html">關於我們</a></li>
-        <li><a href="projects.html">客製案例</a></li>
-        <li><a href="rd.html">研發經驗</a></li>
+        <li><a href="members.html">團隊成員</a></li>
+        <li><a href="projects.html">客製項目</a></li>
+        <li class="nav-dropdown"><button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="research-menu">研發經驗 <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="research-menu" hidden><li><a href="rd.html">技術與設備總覽</a></li><li><a href="research.html">全部案例</a></li><li><a href="cases/electroplating-pid.html">電鍍槽 PID 溫控兼數據收集系統</a></li>
+<li><a href="cases/raman-pid.html">拉曼－氣密 PID 溫控系統</a></li>
+<li><a href="cases/stirrer-pid.html">磁力加熱攪拌台外掛 PID 系統</a></li>
+<li><a href="cases/ball-mill-pid.html">球磨罐式 PID 溫控系統</a></li>
+<li><a href="cases/liquid-filling.html">化學液體計量充填系統</a></li>
+<li><a href="cases/wear-tester.html">特殊環境磨耗實驗機</a></li>
+<li><a href="cases/optical-wire-selection.html">智慧光學挑線系統</a></li>
+<li><a href="cases/hollow-rotary-stage.html">中空旋轉載台</a></li>
+<li><a href="cases/drop-weight-tester.html">簡易式落槌測試機</a></li>
+<li><a href="cases/large-drop-weight.html">大型重力落槌系統</a></li>
+<li><a href="cases/auto-feeding.html">智慧型自動補料系統</a></li>
+<li><a href="cases/tof-sampling.html">TOF 進樣系統與實驗腔體</a></li>
+<li><a href="cases/three-axis-optical-stage.html">三軸式光學載台</a></li>
+<li><a href="cases/vacuum-magnetic-rack.html">真空系統磁場架</a></li>
+<li><a href="cases/pneumatic-relay.html">氣控繼電器</a></li>
+<li><a href="cases/vacuum-sample-tray.html">真空樣品盤</a></li>
+<li><a href="cases/anti-static-tray.html">抗靜電 TRAY 盤</a></li>
+<li><a href="cases/oxygen-free-copper-vessel.html">無氧銅實驗罐</a></li>
+<li><a href="cases/oxygen-free-copper-fixture.html">無氧銅治具</a></li>
+<li><a href="cases/outgassing-chamber.html">釋氣檢測腔體</a></li>
+<li><a href="cases/photochemical-cell.html">光化學電池</a></li>
+<li><a href="cases/precision-machining.html">精密加工實例</a></li></ul></li>
         <li><a href="contact.html">聯絡我們</a></li>
       </ul>
-      <a class="lang-switch" href="en/index.html" hreflang="en" lang="en">EN</a>
+      <span class="lang-switch" aria-label="英文版尚未提供">EN（準備中）</span>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <h1>[公司名稱]</h1>
-      <p>[一句話說明公司提供的價值，例如：量身訂做的儀器研發與客製化製造專家]</p>
-      <div class="hero-links">
-        <a class="button" href="projects.html">查看客製案例</a>
-        <a class="button" href="contact.html">聯絡我們</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>我們能做什麼</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>客製案例</h3>
-          <p>[簡述客製化專案的服務範圍]</p>
-          <a href="projects.html">了解更多 →</a>
-        </div>
-        <div class="card">
-          <h3>研發經驗</h3>
-          <p>[簡述研發經驗涵蓋的技術領域]</p>
-          <a href="rd.html">了解更多 →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<main id="main-content">
+<section class="hero hero-photo"><div class="container"><p>國立成功大學－機械科技研發中心－精密儀器工程室</p><h1>精準創新驅動未來實驗</h1><p class="hero-subtitle">為您量身打造精密儀器與設備</p><div class="hero-links"><a class="button" href="projects.html">查看客製項目</a><a class="button" href="contact.html">聯絡我們</a></div></div></section><section class="section"><div class="container"><h2>我們能做什麼</h2><p>我們專注於高精密儀器研發與自動化系統整合，結合先進的精密加工製造能力，提供從概念設計、客製製造到系統測試的全方位服務，滿足您在先進製造與實驗自動化的獨特需求。</p><div class="card-grid home-services"><article class="card"><h3>客製化儀器與設備</h3><p>核心技術涵蓋精密機械設計、PID 溫度控制與高精度運動控制，結合精密加工製造能力，專精於自動化系統開發及先進儀器的系統整合。</p><a href="projects.html">查看客製項目 →</a></article>
+<article class="card"><h3>精密加工與檢測</h3><p>精密零件製造、實驗儀器開發與材料熱衝擊檢測。</p><a href="rd.html">查看技術與設備 →</a></article></div></div></section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>&copy; 2026 [公司名稱]. All rights reserved.</p>
+    <p>&copy; 2026 精密儀器工程室。All rights reserved.</p>
     <p><a href="contact.html">聯絡我們</a></p>
   </div>
 </footer>

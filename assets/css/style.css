@@ -16,7 +16,7 @@ h1, h2, h3 {
   line-height: 1.3;
 }
 
-a { color: var(--color-secondary); }
+a { color: var(--color-primary); }
 a:hover, a:focus { text-decoration: underline; }
 img { max-width: 100%; display: block; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -65,12 +65,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 4px;
-  background: var(--logo-image, var(--color-accent));
-  background-size: cover;
+.brand-logo {
+  width: 6.5rem;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .nav-toggle {
@@ -151,8 +150,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  background: var(--color-bg-alt);
+  border-top: 3px solid var(--color-accent);
+  background: var(--color-primary);
   margin-top: 3rem;
 }
 
@@ -162,8 +161,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-on-primary);
 }
+
+.site-footer a { color: var(--color-on-primary); }
+.site-footer :focus-visible, .contact-strip :focus-visible { outline-color: var(--color-on-primary); }
 
 @media (min-width: 768px) {
   .footer-inner {
@@ -195,12 +197,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   text-decoration: none;
 }
 
-.button:hover {
-  background: var(--color-secondary);
+.button:hover, .button:focus-visible {
+  background: var(--color-primary-hover);
   text-decoration: none;
 }
 
@@ -227,6 +229,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .card h3 { margin-top: 0; }
+
+.home-services > .card { display: flex; flex-direction: column; }
+.home-services > .card > a:last-child { margin-top: auto; padding-top: 1rem; align-self: flex-start; }
 
 /* R&D Experience index + anchor sections */
 .rd-index {
@@ -258,3 +263,95 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .contact-list dt { font-weight: 700; color: var(--color-primary); }
 .contact-list dd { margin: 0; color: var(--color-text-muted); }
+
+/* Material-based content pages */
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 20; padding: .75rem; background: #fff; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+.hero-subtitle { padding-top: 1rem; font-size: 1.35rem; }
+.section p { max-width: 75ch; }
+.member-role { font-weight: 700; color: var(--color-secondary); }
+.project-card { overflow: hidden; padding: 0; }
+.project-card img { width: 100%; height: 18rem; object-fit: contain; background: var(--color-bg-alt); }
+.project-card h2 { margin: 0; padding: 1.25rem; font-size: 1.1rem; }
+.contact-copy { overflow-wrap: anywhere; }
+.lang-switch[aria-label] { color: var(--color-text-muted); }
+@media (min-width: 960px) {
+  .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .site-nav { width: 100%; justify-content: space-between; }
+  .site-nav ul { flex-wrap: wrap; gap: 1rem; }
+}
+
+/* Reference-site layout: contact strip, banner, case navigation. */
+.contact-strip { background: var(--color-primary); color: var(--color-on-primary); border-bottom: 1px solid var(--color-primary); font-size: .85rem; }
+.contact-strip a { color: var(--color-on-primary); }
+.contact-strip .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
+.header-inner { min-height: 5.5rem; }
+.brand-name { font-size: 1.35rem; }
+.brand { gap: .75rem; }
+.home-page .contact-strip .container { min-height: 3.25rem; align-items: center; padding-top: .875rem; padding-bottom: .875rem; }
+.home-page .header-inner { min-height: 7rem; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+@media (max-width: 767px) {
+  .brand-logo { width: 5rem; }
+  .brand-name { font-size: 1.1rem; }
+  .brand { gap: .5rem; }
+  .home-page .contact-strip .container { padding-top: .75rem; padding-bottom: .75rem; }
+  .home-page .header-inner { min-height: 6rem; padding-top: 1rem; padding-bottom: 1rem; }
+}
+.page-heading { background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+.page-heading h1 { margin: .75rem 0 0; font-size: 2rem; }
+.breadcrumbs { color: var(--color-text-muted); font-size: .85rem; }
+.hero-photo { text-align: left; padding: clamp(4rem, 10vw, 9rem) 0; background: linear-gradient(90deg, rgba(255,255,255,.96), rgba(255,255,255,.8) 50%, rgba(255,255,255,.25)), url("../img/projects/three-axis-optical-stage.jpg") right center / cover no-repeat; }
+.hero-photo p { margin-left: 0; }
+.hero-photo h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.hero-photo .hero-links { justify-content: flex-start; }
+.nav-dropdown { position: relative; }
+.dropdown-toggle { font: inherit; color: var(--color-text); background: none; border: 0; padding: .5rem 0; cursor: pointer; }
+.dropdown-toggle.active { color: var(--color-primary); font-weight: 700; }
+.site-nav .dropdown-menu { display: block; padding: .5rem; margin: 0; background: var(--color-bg); border: 1px solid var(--color-border); max-height: 55vh; overflow-y: auto; }
+.site-nav .dropdown-menu[hidden] { display: none; }
+.site-nav .dropdown-menu a { padding: .6rem .75rem; font-size: .9rem; border-bottom: 1px solid var(--color-border); }
+.site-nav .dropdown-menu a:hover, .site-nav .dropdown-menu a:focus-visible { background: var(--color-bg-alt); color: var(--color-primary); }
+@media (min-width: 768px) {
+  .site-nav .dropdown-menu { position: absolute; top: 100%; right: 0; width: min(18rem, 85vw); box-shadow: 0 8px 20px #0002; }
+}
+
+
+/* Separate catalogue and case detail views. */
+.catalogue-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem 2rem; }
+.catalogue-card a { display: block; text-decoration: none; }
+.catalogue-card img { width: 100%; height: 15rem; object-fit: contain; background: var(--color-bg-alt); padding: .75rem; }
+.catalogue-caption { display: flex; align-items: baseline; gap: .75rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+.catalogue-caption h2 { font-size: 1.05rem; margin: 0; flex: 1; line-height: 1.6; }
+.case-number { font-size: .8rem; color: var(--color-text-muted); }
+.case-arrow { color: var(--color-primary); }
+.catalogue-card a:hover h2 { text-decoration: underline; }
+.detail-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.detail-content { min-width: 0; }
+.detail-sidebar { display: none; }
+.detail-toolbar { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem; margin-bottom: 2rem; font-size: .9rem; }
+.detail-toolbar span { color: var(--color-text-muted); }
+.detail-gallery { display: grid; gap: 2rem; }
+.detail-gallery figure { margin: 0; }
+.detail-gallery img { width: 100%; height: auto; max-height: 42rem; object-fit: contain; background: var(--color-bg-alt); }
+.detail-gallery figcaption { text-align: right; color: var(--color-text-muted); font-size: .8rem; padding-top: .5rem; }
+.case-pagination { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; margin-top: 3rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem; }
+.case-pagination a { text-decoration: none; }
+.case-pagination a:last-child { text-align: right; }
+.case-pagination small { display: block; color: var(--color-text-muted); margin-bottom: .5rem; }
+.page-heading h1 { overflow-wrap: anywhere; line-height: 1.5; }
+@media (min-width: 640px) {
+  .catalogue-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (min-width: 1101px) {
+  .catalogue-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .detail-layout { grid-template-columns: 15rem minmax(0,1fr); }
+  .detail-sidebar { display: block; border-right: 1px solid var(--color-border); padding-right: 1.5rem; }
+  .detail-sidebar h2 { margin-top: 0; font-size: 1.2rem; }
+  .detail-sidebar a { display: block; padding: .7rem 0; border-bottom: 1px solid var(--color-border); text-decoration: none; font-size: .9rem; }
+  .detail-sidebar a[aria-current="page"] { color: var(--color-primary); font-weight: 700; }
+  .site-nav .dropdown-menu { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 32rem; max-height: 65vh; padding: .75rem; column-gap: .5rem; }
+  .site-nav .dropdown-menu[hidden] { display: none; }
+}
