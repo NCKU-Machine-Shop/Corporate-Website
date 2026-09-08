@@ -12,7 +12,13 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
+  /* Sticky footer: short pages (projects, contact) keep the footer at the viewport bottom. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main { flex: 1 0 auto; }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
@@ -289,6 +295,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Reference-site layout: contact strip, banner, case navigation. */
+/* Topbar, header, and footer content span the full viewport; only article content stays in the 1100px column. */
+.contact-strip .container, .header-inner, .footer-inner {
+  max-width: none;
+  padding-left: clamp(1.25rem, 3vw, 3rem);
+  padding-right: clamp(1.25rem, 3vw, 3rem);
+}
 .contact-strip { background: var(--color-primary); color: var(--color-on-primary); border-bottom: 1px solid var(--color-primary); font-size: .85rem; }
 .contact-strip a { color: var(--color-on-primary); }
 /* Topbar/header sizing is shared by every page so index.html and inner pages line up. */
