@@ -2,6 +2,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+@supports (scrollbar-gutter: stable) {
+  html { overflow-y: auto; scrollbar-gutter: stable; }
+}
 
 body {
   font-family: var(--font-body);
@@ -287,18 +291,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* Reference-site layout: contact strip, banner, case navigation. */
 .contact-strip { background: var(--color-primary); color: var(--color-on-primary); border-bottom: 1px solid var(--color-primary); font-size: .85rem; }
 .contact-strip a { color: var(--color-on-primary); }
-.contact-strip .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; padding-top: .5rem; padding-bottom: .5rem; }
-.header-inner { min-height: 5.5rem; }
+/* Topbar/header sizing is shared by every page so index.html and inner pages line up. */
+.contact-strip .container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem; min-height: 3.25rem; padding-top: .875rem; padding-bottom: .875rem; }
+.header-inner { min-height: 7rem; padding-top: 1.25rem; padding-bottom: 1.25rem; }
 .brand-name { font-size: 1.35rem; }
 .brand { gap: .75rem; }
-.home-page .contact-strip .container { min-height: 3.25rem; align-items: center; padding-top: .875rem; padding-bottom: .875rem; }
-.home-page .header-inner { min-height: 7rem; padding-top: 1.25rem; padding-bottom: 1.25rem; }
 @media (max-width: 767px) {
   .brand-logo { width: 5rem; }
   .brand-name { font-size: 1.1rem; }
   .brand { gap: .5rem; }
-  .home-page .contact-strip .container { padding-top: .75rem; padding-bottom: .75rem; }
-  .home-page .header-inner { min-height: 6rem; padding-top: 1rem; padding-bottom: 1rem; }
+  .contact-strip .container { padding-top: .75rem; padding-bottom: .75rem; }
+  .header-inner { min-height: 6rem; padding-top: 1rem; padding-bottom: 1rem; }
 }
 .page-heading { background: var(--color-bg-alt); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
 .page-heading h1 { margin: .75rem 0 0; font-size: 2rem; }
