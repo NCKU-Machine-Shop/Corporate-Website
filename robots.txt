@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /en/
+
+Sitemap: https://nckums.com.tw/sitemap.xml
