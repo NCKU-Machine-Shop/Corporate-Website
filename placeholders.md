@@ -18,3 +18,10 @@
 - 獨立 JPG：未確認案例對應，依使用者指示以簡報圖片為主。
 
 勿猜測人名英譯、案例規格、專案成果或照片對應。
+
+## SEO
+
+- 已完成：canonical、`og:url`、`sitemap.xml`（網域 nckums.com.tw）、各頁 BreadcrumbList、首頁與聯絡頁 Organization、案例目錄 ItemList、團隊成員 Person、`404.html`。
+- 待辦：至 Google Search Console 驗證網站並送出 sitemap。
+- `404.html` 使用相對路徑；若部署在子路徑（如 GitHub Pages 專案站），深層網址觸發的 404 其樣式與連結會失效，屆時改為絕對路徑。
+- 英文頁維持 `noindex`，內容定案後再移除並補 `hreflang`。

@@ -9,6 +9,7 @@
 - [ ] 正式中英文內容 — 目前為佔位文字（以 `[ ]` 標示）
 - [ ] GitHub Pages 部署 — 待有 GitHub 帳號 / remote 後另行處理
 - [x] `LICENSE` — All Rights Reserved
+- [x] SEO：各頁獨立 title／description、canonical、Open Graph、JSON-LD 結構化資料、`robots.txt`、`sitemap.xml`、`404.html`（網域 nckums.com.tw）
 
 ## 結構
 
